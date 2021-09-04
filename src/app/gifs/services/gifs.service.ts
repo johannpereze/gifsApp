@@ -11,8 +11,10 @@ export class GifsService {
   }
 
   buscarGifs(query: string) {
+    if (!query.length) return;
     if (this._historial.includes(query)) return;
     this._historial.unshift(query);
+    if (this._historial.length > 10) this._historial.pop();
     console.log(this._historial);
   }
 }
