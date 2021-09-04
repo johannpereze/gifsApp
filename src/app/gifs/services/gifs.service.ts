@@ -11,7 +11,7 @@ export class GifsService {
   }
 
   buscarGifs(query: string) {
-    query = query.trim()
+    query = query.trim().toUpperCase();
     if (!query.length) return;
     if (this._historial.includes(query)) return;
     this._historial.unshift(query);
