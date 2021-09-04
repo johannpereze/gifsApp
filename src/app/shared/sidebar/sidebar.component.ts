@@ -6,6 +6,9 @@ import { GifsService } from '../../gifs/services/gifs.service';
   templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent {
-  constructor(private gifsService: GifsService){}
-get historial():string[]{return this.gifsService.historial} //Esto lo hice generando un getter. No se puede hacer sin uno. Tiene que ser una función
+  constructor(private gifsService: GifsService) {}
+
+  get historial(): string[] {
+    return this.gifsService.historial;
+  } //Esto lo hice generando un getter. No se puede hacer sin uno. Tiene que ser una función
 }

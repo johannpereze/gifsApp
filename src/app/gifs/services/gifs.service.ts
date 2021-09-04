@@ -1,21 +1,18 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GifsService {
+  private _historial: string[] = [];
 
-  private _historial: string[]=[
-
-  ]
-
-  get historial(){
-    return [...this._historial]
+  get historial() {
+    return [...this._historial];
   }
 
-  buscarGifs(query:string){
+  buscarGifs(query: string) {
+    if (this._historial.includes(query)) return;
     this._historial.unshift(query);
-    console.log(this._historial)
+    console.log(this._historial);
   }
-
 }
