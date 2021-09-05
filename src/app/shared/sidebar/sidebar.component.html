@@ -3,7 +3,8 @@
   <hr class="text-white" />
   <div class="list-group list-reset">
     <a
-      *ngFor='let historia of historial'
+      *ngFor="let historia of historial"
+      (click)="redibujarGifs(historia)"
       class="list-group-item list-group-item-action"
       href="#"
       >{{ historia | titlecase }}</a
