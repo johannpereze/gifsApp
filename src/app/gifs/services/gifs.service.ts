@@ -11,6 +11,7 @@ export class GifsService {
   private _historial: string[] = [];
 
   public resultados: Gif[] = [];
+  
   get historial() {
     return [...this._historial];
   }
